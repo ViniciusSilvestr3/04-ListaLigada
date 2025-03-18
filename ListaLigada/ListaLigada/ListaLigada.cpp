@@ -150,10 +150,28 @@ void excluirElemento()
 
 void buscarElemento()
 {
+	int valorAchado;
+	cout << "Digite o valor do elemento que deseja encontrar: ";
+	cin >> valorAchado;
+	NO* aux = posicaoElemento(valorAchado);
+
+	if (aux == NULL) {
+		cout << "NÃO ENCONTRADO";
+		return;
+	}
+	while (aux->prox != NULL);
+	if (aux->valor == valorAchado) {
+		cout << "ENCONTRADO. \n";
+		return;
+	}
+	if (primeiro == NULL) {
+		cout << "LISTA VAZIA.";
+		
+	}
 	
-}
-
-
+	
+	
+	}
 
 // retorna um ponteiro para o elemento buscado
 // ou NULL se o elemento não estiver na lista
